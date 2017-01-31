@@ -1,11 +1,11 @@
 # 2017-01-30
 # MLM Practice
 
-d <- read.csv("alda/berkeley_pp.csv")
+d <- read.csv("../alda/berkeley_pp.csv")
 library(ggplot2)
 library(nlme)
 qplot(age, iq, data = d, geom = "point")
-dd <- read.csv("alda/wages_small_pp.csv")
+dd <- read.csv("../alda/wages_small_pp.csv")
 qplot(lnw, exper, data = dd, geom = "point")
 mod1 <- lm(lnw ~ exper, data = dd)
 summary(mod1)
