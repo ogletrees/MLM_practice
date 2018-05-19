@@ -1,0 +1,52 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh14340\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 > mean(post$a)\
+[1] 3.736822\
+> mean(post$a_cafe)\
+[1] 3.73617\
+> mean(post$b_cafe)\
+[1] -1.233515\
+> mean(post$a)\
+[1] 3.736822\
+> mean(post$b)\
+[1] -1.233594\
+\
+> mean(post$sigma_cafe)\
+[1] 0.573862\
+> mean(post$sigma)\
+[1] 0.4876227\
+\
+> mean(post$Rho)\
+[1] 0.3996416\
+------------------------------------------\
+> summary(mod_1)\
+Linear mixed model fit by REML ['lmerMod']\
+Formula: wait ~ afternoon + (afternoon | cafe)\
+   Data: d\
+\
+REML criterion at convergence: 355.3\
+\
+Scaled residuals: \
+     Min       1Q   Median       3Q      Max \
+-2.38568 -0.65654 -0.00691  0.67215  3.00513 \
+\
+Random effects:\
+ Groups   Name        Variance Std.Dev. Corr \
+ cafe     (Intercept) 0.75642  0.8697        \
+          afternoon   0.05461  0.2337   -0.34\
+ Residual             0.23155  0.4812        \
+Number of obs: 200, groups:  cafe, 20\
+\
+Fixed effects:\
+            Estimate Std. Error t value\
+(Intercept)   3.7365     0.2003   18.65\
+afternoon    -1.2329     0.0858  -14.37\
+\
+Correlation of Fixed Effects:\
+          (Intr)\
+afternoon -0.337}
