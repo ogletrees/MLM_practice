@@ -54,6 +54,9 @@ m13.1 <- map2stan(
   data=d ,
   iter=5000 , warmup=2000 , chains=2 )
 
+precis(m13.1)
+WAIC(m13.1)
+
 post <- extract.samples(m13.1)
 dens( post$Rho[,1,2] )
 
